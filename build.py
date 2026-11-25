@@ -163,7 +163,7 @@ nav = ''.join(f'<button data-t="{i}">{t}</button>' for i, t, _ in TABS)
 panels = ''.join(f'<section class="panel" id="p-{i}">{b}</section>' for i, _, b in TABS)
 css = (R/'static'/'style.css').read_text(encoding='utf-8'); js = (R/'static'/'app.js').read_text(encoding='utf-8')
 page = f'''<!doctype html><html lang="fr"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>O.BeOne != CannotBe, dashboard</title><style>{css}</style></head><body><canvas id="bg"></canvas>
+<title>O.BeOne != CannotBe, dashboard</title><link rel="icon" type="image/svg+xml" href="favicon.svg"><link rel="icon" type="image/png" sizes="192x192" href="icon-192.png"><link rel="apple-touch-icon" href="icon-192.png"><meta name="theme-color" content="#0b1220"><style>{css}</style></head><body><canvas id="bg"></canvas>
 <main><div class="hdr">{logo}<div><div class="live"><i></i>Mis à jour le {now}</div><h1>Relier un cas humain à un aliment, sans exposer personne</h1></div></div></main>
 <div class="tabs">{nav}</div>
 <main>{panels}<footer>Généré le {now} depuis data/*.csv. Chaque modification d'un CSV relance la génération.</footer></main><script>{js}</script></body></html>'''
