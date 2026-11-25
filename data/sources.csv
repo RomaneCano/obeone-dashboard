@@ -1,0 +1,26 @@
+titre,auteurs,annee,type,theme,publication_projet,lecture,referent
+BeONE: Building Integrative Tools for One Health Surveillance,One Health EJP,,Page web,Projet,oui,partiel,Lina
+beone-datahub,ssi-dk,,Logiciel,Architecture,oui,non examiné,Rémi
+BeONE: Initial Data Management Plan,Kiil,2021,Rapport,Gouvernance,oui,non lu,Alexis
+Building Integrative Tools for One Health Surveillance (BfR),BfR,,Page web,Projet,oui,partiel,Lina
+Clonal relation between Salmonella Dublin strains of bovine and food origin,Linde et al.,2023,Article,Clustering,non,lu,Aziz
+"Collaboration agreement on molecular typing, EFSA-ECDC","EFSA, ECDC",2022,Rapport,Gouvernance,non,non lu,Alexis
+"CoVnita, privacy-preserving framework for SARS-CoV-2 classification",Sim et al.,2023,Article,Vie privée,non,non lu,Aziz
+D-BeONE.1.1 Report on the state of the art,"INSA, NVI",2021,Livrable,Méthodes,oui,non lu,Aziz
+D-BeONE.1.2 BeONE dataset,Mixão et al.,2021,Livrable,Anonymisation,oui,partiel,Alexis
+D-BeONE.1.3 Clustering congruence and thresholds,Mixão et al.,2022,Livrable,Clustering,oui,lu,Aziz
+D-BeONE.5.4 Final Evaluation Report,Joensen,2022,Livrable,Évaluation,oui,non lu,Lina
+Developing a one health data integration framework,Oltean et al.,2025,Article,Interopérabilité,non,non lu,Rémi
+Differentially private federated learning for localized control of infectious disease dynamics,Kerkouche et al.,2025,Préprint,Vie privée,non,non lu,Aziz
+EFSA-ECDC One Health WGS Sharing Model,"Rossi, Nannapaneni",2026,Présentation,Architecture,non,non lu,Rémi
+"EFSA-ECDC One Health WGS system, présentation 2023","Rossi, Nannapaneni",2023,Présentation,Architecture,non,non lu,Rémi
+Ethical challenges in pathogen sequencing: a systematic scoping review,"Johnson, Parker",2020,Article,Éthique,non,non lu,Romane
+Ethics and governance challenges related to genomic data sharing,Moodley et al.,2022,Article,Éthique,non,non lu,Romane
+Federated Analysis for Privacy-Preserving Data Sharing: A Technical and Legal Primer,Casaletto et al.,2023,Article,Vie privée,non,non lu,Aziz
+Global approaches to infectious disease surveillance,Khurana et al.,2026,Article,Gouvernance,non,non lu,Lina
+Guiding principles for pathogen genome data sharing,OMS,2022,Rapport,Gouvernance,non,non lu,Alexis
+Multi-country and intersectoral assessment of cluster congruence,Mixão et al.,2024,Préprint,Clustering,oui,non lu,Aziz
+Règlement (UE) 2016/679 (RGPD),"Parlement européen, Conseil",2016,Texte juridique,Droit,non,partiel,Alexis
+Règlement (UE) 2025/327 (espace européen des données de santé),"Parlement européen, Conseil",2025,Texte juridique,Droit,non,non lu,Alexis
+ReporTree: a surveillance-oriented tool to strengthen the linkage between genetic clusters and epidemiological data,Mixão et al.,2023,Article,Clustering,oui,partiel,Aziz
+Attributes and principles of genomic data-sharing platforms,OMS,2025,Page web,Gouvernance,non,non lu,Alexis

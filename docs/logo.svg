@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 240" role="img" aria-label="O.BeOne != CannotBe">
+  <defs>
+    <linearGradient id="g" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#2dd4bf"/><stop offset="1" stop-color="#38bdf8"/>
+    </linearGradient>
+  </defs>
+  <rect width="700" height="240" rx="28" fill="#0b1220"/>
+  <g transform="translate(118 128)">
+    <!-- cluster ring: 11 linked isolates, the 12th leaves the ring (nobody exposed) -->
+    <g stroke="url(#g)" stroke-width="2.2" stroke-linecap="round" fill="none" opacity=".9">
+      <path d="M0,-70 L35,-60.6 L60.6,-35 L70,0 L60.6,35 L35,60.6 L0,70 L-35,60.6 L-60.6,35 L-70,0 L-60.6,-35"/>
+      <path d="M0,-70 L0,70 M-60.6,-35 L60.6,35 M-60.6,35 L60.6,-35 M-70,0 L70,0" opacity=".25"/>
+    </g>
+    <g fill="url(#g)">
+      <circle cx="0" cy="-70" r="7"/><circle cx="35" cy="-60.6" r="7"/><circle cx="60.6" cy="-35" r="7"/>
+      <circle cx="70" cy="0" r="7"/><circle cx="60.6" cy="35" r="7"/><circle cx="35" cy="60.6" r="7"/>
+      <circle cx="0" cy="70" r="7"/><circle cx="-35" cy="60.6" r="7"/><circle cx="-60.6" cy="35" r="7"/>
+      <circle cx="-70" cy="0" r="7"/><circle cx="-60.6" cy="-35" r="7"/>
+    </g>
+    <!-- the detached node: anonymised, linked to nothing -->
+    <circle cx="-44" cy="-84" r="7" fill="none" stroke="#fb7185" stroke-width="2.4" stroke-dasharray="3 3"/>
+    <!-- not-equal sign at the centre -->
+    <g stroke="#f8fafc" stroke-width="9" stroke-linecap="round">
+      <path d="M-26,-12 H26"/><path d="M-26,14 H26"/>
+    </g>
+    <path d="M18,-34 L-18,38" stroke="#fb7185" stroke-width="9" stroke-linecap="round"/>
+  </g>
+  <g font-family="Inter, Segoe UI, Helvetica, Arial, sans-serif">
+    <text x="238" y="120" font-size="58" font-weight="800" fill="#f8fafc" letter-spacing="-1">O.BeOne</text>
+    <text x="238" y="172" font-size="40" font-weight="700" fill="#94a3b8" letter-spacing="-.5"><tspan font-family="Menlo, Consolas, monospace" fill="#fb7185">!=</tspan> <tspan fill="#2dd4bf">CannotBe</tspan></text>
+    <text x="240" y="204" font-size="12" fill="#64748b" letter-spacing="2">UN CAS, UN ALIMENT, PERSONNE D'EXPOSÉ</text>
+  </g>
+</svg>

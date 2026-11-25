@@ -1,0 +1,9 @@
+controle,statut,constat,source,referent
+Licence,Présent,"Données et livrable D1.3 en CC BY 4.0, accès libre",D1.3 p.2; Zenodo,Alexis
+Anonymisation,Partiel,"Lectures renommées et ordre mélangé; métadonnées publiées (année, pays, source) non traitées",D1.2 p.3-4,Alexis
+Plan de gestion des données,"Existe, non lu",D6.1 Initial Data Management Plan publié sur Zenodo (5497853),D6.1,Alexis
+RGPD et base juridique,Absent,Aucune base juridique ni analyse RGPD constatée dans les documents lus,D1.3; RGPD art. 4,Alexis
+"Politique d'accès, organe de gouvernance",Absent,Aucune politique d'accès ni organe de gouvernance constatés,D1.3,Alexis
+Risque de ré-identification par recoupement,Ouvert,"Pays, année et source de l'isolat peuvent désigner une exploitation",Analyse équipe,Romane
+Risque de stigmatisation d'une filière,Ouvert,Un lien cas-aliment-élevage peut viser une exploitation sans qu'elle soit informée,Linde et al. 2023,Romane
+"Architecture centralisée, traitement distribué",Constat,"Dépôt ouvert unique, calcul réalisé par chaque partenaire",D1.3; beone-datahub,Rémi

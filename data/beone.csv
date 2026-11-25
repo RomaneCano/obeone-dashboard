@@ -1,0 +1,7 @@
+indicateur,valeur,source
+isolats,12267,D1.3
+seuil_listeria,7,D1.3
+seuil_salmonella,14,D1.3
+score_congruence_max,3,D1.3
+bioprojects_ena,4,"PRJEB57166, PRJEB57179, PRJEB57098, PRJEB57119"
+licence_donnees,CC BY 4.0,Zenodo
