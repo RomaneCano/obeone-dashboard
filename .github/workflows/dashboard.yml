@@ -2,7 +2,7 @@ name: Dashboard
 on:
   push:
     branches: [main]
-    paths: ['data/**', 'build.py', 'docs/logo.svg']
+    paths: ['data/**', 'static/**', 'build.py', 'docs/logo.svg']
   workflow_dispatch:
 permissions:
   contents: read
