@@ -20,7 +20,7 @@ ouverts = sum(r['statut'] in ('Absent', 'Ouvert') for r in conf)
 th = collections.Counter(r['theme'] for r in src)
 iso = int(beone['isolats']['valeur']); sl = int(beone['seuil_listeria']['valeur']); ss = int(beone['seuil_salmonella']['valeur'])
 cmax = int(beone['score_congruence_max']['valeur'])
-na = len(plan); fait = sum(r['statut'] == 'Fait' for r in plan); cours = sum(r['statut'] == 'En cours' for r in plan); afaire = sum(r['statut'] == 'À faire' for r in plan)
+na = len(plan); fait = sum(r['statut'] == 'Fait' for r in plan); cours = sum(r['statut'] == 'En cours' for r in plan); afaire = sum(r['statut'] == 'À faire' for r in plan); prep = sum(r['statut'] == 'Préparé' for r in plan)
 pct = round(fait / na * 100)
 
 def who(qui):
@@ -44,10 +44,10 @@ seances = list(dict.fromkeys(r['seance'] for r in plan))
 tl = ''
 for s in seances:
     rs = [r for r in plan if r['seance'] == s]; t = len(rs)
-    f_, c_, a_ = (sum(r['statut'] == k for r in rs) for k in ('Fait', 'En cours', 'À faire'))
-    tl += (f'<div class="tr"><span>{e(s)}</span><div class="bb"><i class="f" data-w="{f_/t*100:.1f}"></i><i class="c" data-w="{c_/t*100:.1f}"></i><i class="t" data-w="{a_/t*100:.1f}"></i></div><b>{f_}/{t}</b></div>')
+    f_, p_, c_, a_ = (sum(r['statut'] == k for r in rs) for k in ('Fait', 'Préparé', 'En cours', 'À faire'))
+    tl += (f'<div class="tr"><span>{e(s)}</span><div class="bb"><i class="f" data-w="{f_/t*100:.1f}"></i><i class="p" data-w="{p_/t*100:.1f}"></i><i class="c" data-w="{c_/t*100:.1f}"></i><i class="t" data-w="{a_/t*100:.1f}"></i></div><b>{f_}/{t}</b></div>')
 lines = [f'{na} actions planifiées sur 6 séances, la préparation et la soutenance.',
-         f'{fait} actions faites, {cours} en cours, {afaire} à faire.',
+         f'{fait} actions faites, {prep} préparées (rédigées, acte humain restant), {cours} en cours, {afaire} à faire.',
          f'{n} sources réunies dans notre bibliothèque Zotero.',
          f'{ouverts} points de conformité restent ouverts dans BeONE.',
          'Notre question : relier un cas humain à un aliment sans exposer personne.']
@@ -63,7 +63,7 @@ resume = f'''<div class="story"><div class="card"><div class="type" id="type" da
 <div class="card kpi tilt"><b data-n="{len(ROLES)}">0</b><span>membres, cinq expertises</span></div>
 <div class="card kpi r tilt"><b data-n="{ouverts}">0</b><span>points de conformité ouverts</span></div>
 <div class="card kpi tilt"><b data-n="{iso}">0</b><span>isolats BeONE publiés</span></div></div>
-<div class="card" style="margin-top:14px"><strong>Avancement par séance</strong><div class="lleg" style="margin:6px 0 12px"><span style="--c:#10b981">fait</span><span style="--c:#fbbf24">en cours</span><span style="--c:#475569">à faire</span></div><div class="tl">{tl}</div></div>'''
+<div class="card" style="margin-top:14px"><strong>Avancement par séance</strong><div class="lleg" style="margin:6px 0 12px"><span style="--c:#10b981">fait</span><span style="--c:#38bdf8">préparé</span><span style="--c:#fbbf24">en cours</span><span style="--c:#475569">à faire</span></div><div class="tl">{tl}</div></div>'''
 
 # ---------- ÉQUIPE ----------
 members = ''
@@ -124,7 +124,7 @@ def tasks_for(m):
 def task_html(k, r, tag):
     l = SEA.get(r['seance'], '')
     link = f' · <a href="{l}" target="_blank" rel="noopener" style="color:var(--sky)">dossier de la séance</a>' if l else ''
-    c = 'ko' if r['statut'] == 'À faire' else 'warn'
+    c = 'ko' if r['statut'] == 'À faire' else ('info' if r['statut'] == 'Préparé' else 'warn')
     return (f'<div class="task"><input type="checkbox" data-k="{k}"><div><div class="tt"><span class="tag">{e(r["seance"])}</span>{e(r["action"])}</div>'
             f'<small>{e(r["resultat"])}{link}</small></div><span class="chip {c}">{e(r["statut"])}</span></div>')
 def extra_html(m):
@@ -146,7 +146,7 @@ for i, p in enumerate(people):
     if p != 'Tous':
         head += f'<div class="card" style="margin-top:14px"><strong>Liens Drive utiles pour {p}</strong>{links_html(p)}{links_html("Tous")}</div>'
     subs += f'<div class="subp {"on" if i==0 else ""}" id="s-{p}">{head}</div>'
-afaire_p = f"<p style=\"color:var(--mut);margin:6px 0 0\">Tirées automatiquement du plan : tout ce qui n'est pas « Fait ». Les cases se cochent sur cet appareil seulement.</p><div class=\"sub\">{btn}</div>{subs}"
+afaire_p = f"<p style=\"color:var(--mut);margin:6px 0 0\">Tirées automatiquement du plan : tout ce qui n'est pas « Fait ». « Préparé » : le document est rédigé, il reste l'acte humain (débat, oral, validation), qui n'est pas compté comme fait. Les cases se cochent sur cet appareil seulement.</p><div class=\"sub\">{btn}</div>{subs}"
 
 # ---------- DRIVE ----------
 cats = collections.OrderedDict()
